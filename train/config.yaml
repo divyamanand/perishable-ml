@@ -1,0 +1,27 @@
+# Training Configuration for Hospital Inventory RL Environment
+
+# Model hyperparameters
+model:
+  algorithm: DQN
+  policy: MlpPolicy
+  learning_rate: 1e-3
+  buffer_size: 50000
+  batch_size: 32
+  train_freq: 4
+  target_update_interval: 1000
+  exploration_fraction: 0.3
+  exploration_final_eps: 0.05
+
+# Training parameters
+training:
+  total_timesteps: 20000
+  tensorboard_log: tb_logs
+  model_save_path: models/dqn_inventory
+
+# Environment parameters
+environment:
+  shelf_life: 7
+  horizon: 365
+  cost_holding: 0.5
+  cost_waste: 2.0
+  cost_shortage: 3.0

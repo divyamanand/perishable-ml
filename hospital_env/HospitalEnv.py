@@ -80,11 +80,10 @@ class HospitalInventoryEnvv(gym.Env):
         return self._get_obs(), {}
 
     def step(self, action):
-        # Place order: arrives after 3 days
-        action = max(0, self.forecast - self.inventory.sum())
-
-        if action > 0 and self.pipeline[-1] == 0:
-            self.pipeline[3] += int(action)
+        # Interpret action directly as order quantity (0-50) arriving after 3 days
+        order_qty = int(action)
+        if order_qty > 0 and self.pipeline[-1] == 0:
+            self.pipeline[3] += order_qty
 
         # Advance pipeline
         arrivals = self.pipeline[0]
