@@ -365,40 +365,4 @@ jobs:
           path: models/
 ```
 
----
 
-## 📚 Additional Resources
-
-- [Stable-Baselines3 Documentation](https://stable-baselines3.readthedocs.io/)
-- [Gymnasium Documentation](https://gymnasium.farama.org/)
-- [FastAPI Documentation](https://fastapi.tiangolo.com/)
-- [Docker Documentation](https://docs.docker.com/)
-
----
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test with Docker
-5. Submit a pull request
-
----
-
-## 📄 License
-
-MIT License - see LICENSE file for details
-
----
-
-## 👥 Support
-
-For issues and questions:
-- Open an issue on GitHub
-- Check existing documentation
-- Review TensorBoard logs for training issues
-
----
-
-**Built with ❤️ using industry-standard RL deployment practices**
